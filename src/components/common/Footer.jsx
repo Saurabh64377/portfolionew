@@ -1,0 +1,94 @@
+import { motion } from 'framer-motion'
+import { FiGithub, FiLinkedin, FiTwitter, FiMail } from 'react-icons/fi'
+import { useScrollAnimation, fadeUpVariants } from '../../hooks/useScrollAnimation'
+
+const socialLinks = [
+  { icon: FiGithub, href: 'https://github.com/saurabh-agrahari', label: 'GitHub' },
+  { icon: FiLinkedin, href: 'https://linkedin.com/in/saurabh-agrahari', label: 'LinkedIn' },
+  { icon: FiTwitter, href: 'https://twitter.com/saurabh_agrahari', label: 'Twitter' },
+  { icon: FiMail, href: 'mailto:saurabh64377@gmail.com', label: 'Email' },
+]
+
+const footerLinks = [
+  { label: 'About', href: '#about' },
+  { label: 'Skills', href: '#skills' },
+  { label: 'Projects', href: '#projects' },
+  { label: 'Services', href: '#services' },
+  { label: 'Contact', href: '#contact' },
+]
+
+export default function Footer() {
+  const { ref, inView } = useScrollAnimation()
+  const year = new Date().getFullYear()
+
+  return (
+    <footer ref={ref} className="relative pt-20 pb-8 overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent pointer-events-none" />
+
+      <div className="section-container relative z-10">
+        <motion.div
+          variants={fadeUpVariants}
+          initial="hidden"
+          animate={inView ? 'visible' : 'hidden'}
+          className="flex flex-col items-center text-center gap-8"
+        >
+          {/* Logo */}
+          <div className="flex flex-col items-center gap-3">
+            <div
+              className="w-14 h-14 rounded-2xl flex items-center justify-center font-black text-white text-2xl"
+              style={{ background: 'linear-gradient(135deg, #6c63ff, #a855f7)' }}
+            >
+              S
+            </div>
+            <p className="text-white/40 text-sm max-w-sm">
+              Building scalable web applications with passion and precision.
+              Open to full-stack developer opportunities.
+            </p>
+          </div>
+
+          {/* Nav Links */}
+          <div className="flex flex-wrap justify-center gap-x-8 gap-y-2">
+            {footerLinks.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                className="text-white/40 hover:text-white text-sm transition-colors duration-300"
+              >
+                {link.label}
+              </a>
+            ))}
+          </div>
+
+          {/* Social Links */}
+          <div className="flex items-center gap-3">
+            {socialLinks.map(({ icon: Icon, href, label }) => (
+              <a
+                key={label}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={label}
+                className="w-10 h-10 rounded-xl glass border border-white/08 flex items-center justify-center text-white/40 hover:text-white hover:border-accent/30 hover:bg-accent/10 transition-all duration-300"
+              >
+                <Icon size={16} />
+              </a>
+            ))}
+          </div>
+
+          {/* Divider */}
+          <div className="w-full h-px bg-white/06" />
+
+          {/* Copyright */}
+          <div className="flex flex-col sm:flex-row items-center justify-between w-full gap-2 text-xs text-white/25">
+            <span>© {year} Saurabh Agrahari. All rights reserved.</span>
+            <span className="flex items-center gap-1">
+              Built with
+              <span className="text-accent/60">React</span> +
+              <span className="text-accent/60">Tailwind CSS</span>
+            </span>
+          </div>
+        </motion.div>
+      </div>
+    </footer>
+  )
+}

@@ -14,7 +14,7 @@ export default defineConfig({
         manualChunks: {
           vendor: ['react', 'react-dom', 'react-router-dom'],
           animations: ['framer-motion', 'gsap'],
-          ui: ['swiper', 'react-countup'],
+          ui: ['react-countup'],
         },
       },
     },

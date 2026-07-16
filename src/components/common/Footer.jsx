@@ -81,10 +81,10 @@ export default function Footer() {
           {/* Copyright */}
           <div className="flex flex-col sm:flex-row items-center justify-between w-full gap-2 text-xs text-white/25">
             <span>© {year} Saurabh Agrahari. All rights reserved.</span>
-            <span className="flex items-center gap-1">
-              Built with
-              <span className="text-accent/60">React</span> +
-              <span className="text-accent/60">Tailwind CSS</span>
+            <span className="flex items-center gap-1.5">
+              Made with
+              <span className="text-accent/60">♥</span>
+              by Saurabh
             </span>
           </div>
         </motion.div>

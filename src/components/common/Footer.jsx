@@ -1,19 +1,18 @@
 import { motion } from 'framer-motion'
-import { FiGithub, FiLinkedin, FiTwitter, FiMail } from 'react-icons/fi'
+import { FiGithub, FiLinkedin, FiMail } from 'react-icons/fi'
 import { useScrollAnimation, fadeUpVariants } from '../../hooks/useScrollAnimation'
 
 const socialLinks = [
-  { icon: FiGithub, href: 'https://github.com/saurabh-agrahari', label: 'GitHub' },
-  { icon: FiLinkedin, href: 'https://linkedin.com/in/saurabh-agrahari', label: 'LinkedIn' },
-  { icon: FiTwitter, href: 'https://twitter.com/saurabh_agrahari', label: 'Twitter' },
+  { icon: FiGithub, href: 'https://github.com/Saurabh64377', label: 'GitHub' },
+  { icon: FiLinkedin, href: 'https://www.linkedin.com/in/saurabh-agrahari-509459248/', label: 'LinkedIn' },
   { icon: FiMail, href: 'mailto:saurabh64377@gmail.com', label: 'Email' },
 ]
 
 const footerLinks = [
   { label: 'About', href: '#about' },
   { label: 'Skills', href: '#skills' },
+  { label: 'Experience', href: '#experience' },
   { label: 'Projects', href: '#projects' },
-  { label: 'Services', href: '#services' },
   { label: 'Contact', href: '#contact' },
 ]
 
@@ -36,13 +35,13 @@ export default function Footer() {
           <div className="flex flex-col items-center gap-3">
             <div
               className="w-14 h-14 rounded-2xl flex items-center justify-center font-black text-white text-2xl"
-              style={{ background: 'linear-gradient(135deg, #6c63ff, #a855f7)' }}
+              style={{ background: 'linear-gradient(135deg, #3B82F6, #8B5CF6)' }}
             >
               S
             </div>
             <p className="text-white/40 text-sm max-w-sm">
-              Building scalable web applications with passion and precision.
-              Open to full-stack developer opportunities.
+              Full Stack Developer building production applications at Whizlancer.
+              Open to new opportunities.
             </p>
           </div>
 

@@ -8,39 +8,38 @@ const highlights = [
   {
     icon: FiCode,
     label: 'Frontend',
-    desc: 'React.js, Redux, Tailwind CSS',
-    color: '#6c63ff',
-    bg: 'rgba(108,99,255,0.1)',
+    desc: 'React.js, Redux Toolkit, Tailwind CSS',
+    color: '#3B82F6',
+    bg: 'rgba(59,130,246,0.1)',
   },
   {
     icon: FiServer,
     label: 'Backend',
-    desc: 'Node.js, Express.js, REST APIs',
-    color: '#43e97b',
-    bg: 'rgba(67,233,123,0.1)',
+    desc: 'Node.js, Express.js, REST APIs, JWT',
+    color: '#8B5CF6',
+    bg: 'rgba(139,92,246,0.1)',
   },
   {
     icon: FiDatabase,
     label: 'Database',
-    desc: 'MongoDB, MySQL, Mongoose',
-    color: '#38f9d7',
-    bg: 'rgba(56,249,215,0.1)',
+    desc: 'MySQL, MongoDB',
+    color: '#06B6D4',
+    bg: 'rgba(6,182,212,0.1)',
   },
   {
     icon: FiGlobe,
-    label: 'Cloud',
-    desc: 'Cloudinary, Socket.IO, JWT',
-    color: '#f093fb',
-    bg: 'rgba(240,147,251,0.1)',
+    label: 'Cloud & DevOps',
+    desc: 'AWS EC2, Nginx, PM2, CI/CD',
+    color: '#10B981',
+    bg: 'rgba(16,185,129,0.1)',
   },
 ]
 
 const traits = [
   'Problem Solver',
   'Fast Learner',
-  'Team Player',
   'Detail Oriented',
-  'Open Source Contributor',
+  'Ownership Mindset',
   'Scalability Focused',
 ]
 
@@ -56,9 +55,9 @@ export default function About() {
       <div ref={ref} className="section-container relative z-10">
         <SectionHeading
           tag="About Me"
-          title="Turning Ideas Into"
-          highlight="Digital Reality"
-          subtitle="A passionate Full Stack Developer building production-grade applications with clean code, scalable architecture, and pixel-perfect UIs."
+          title="Building Software"
+          highlight="People Actually Use"
+          subtitle="A Full Stack Developer focused on shipping production-grade applications — from database schema to deployed infrastructure."
           inView={inView}
         />
 
@@ -75,30 +74,33 @@ export default function About() {
               <div className="flex items-center gap-3">
                 <div
                   className="w-10 h-10 rounded-xl flex items-center justify-center"
-                  style={{ background: 'rgba(108,99,255,0.15)', border: '1px solid rgba(108,99,255,0.2)' }}
+                  style={{ background: 'rgba(59,130,246,0.15)', border: '1px solid rgba(59,130,246,0.2)' }}
                 >
-                  <HiAcademicCap size={20} style={{ color: '#a5a0ff' }} />
+                  <HiAcademicCap size={20} style={{ color: '#93C5FD' }} />
                 </div>
                 <div>
-                  <div className="text-white font-semibold text-sm">BCA Graduate</div>
-                  <div className="text-white/40 text-xs font-mono">Bachelor of Computer Applications</div>
+                  <div className="text-white font-semibold text-sm">BCA, JS University, Agra</div>
+                  <div className="text-white/40 text-xs font-mono">2022 – 2025 · CGPA 7.96/10</div>
                 </div>
               </div>
 
               <p className="text-white/55 text-sm leading-relaxed">
-                I'm <span className="text-white font-medium">Saurabh Agrahari</span>, a passionate Full Stack Developer
-                with expertise in the MERN stack. I specialize in building end-to-end web applications
-                — from intuitive React frontends to scalable Node.js backends.
+                I'm <span className="text-white font-medium">Saurabh Agrahari</span>, a Full Stack Developer
+                currently building production applications at{' '}
+                <span className="text-white">Whizlancer Pvt. Ltd.</span> I work end-to-end — from
+                React frontends to Node.js/Express APIs backed by MySQL and MongoDB.
               </p>
               <p className="text-white/55 text-sm leading-relaxed">
-                With <span className="text-white/80">7+ projects</span> under my belt, I've built real-world applications
-                including e-commerce platforms, real-time chat systems, expense trackers, and admin dashboards.
-                My goal is to build software that <span className="text-white/80">solves real problems</span> at scale.
+                My work centers on <span className="text-white/80">role-based systems</span> — school
+                management platforms, multi-tenant SaaS tools, and internal dashboards where getting
+                authentication and permissions right matters as much as the UI. I've shipped{' '}
+                <span className="text-white/80">4 production projects</span>, two of them live and
+                publicly deployed on AWS.
               </p>
               <p className="text-white/55 text-sm leading-relaxed">
-                I dream of building my own software company someday. Until then, I'm looking for opportunities
-                at <span className="gradient-text font-semibold">product companies and startups</span> where I can
-                contribute, learn, and grow rapidly.
+                Beyond writing code, I own the <span className="gradient-text font-semibold">full deployment
+                pipeline</span> — AWS EC2, Nginx reverse proxies, PM2 process management, and SSL — so
+                what I build actually reaches users, not just a local dev server.
               </p>
             </div>
 
@@ -117,7 +119,7 @@ export default function About() {
                 Let's Work Together
               </a>
               <a
-                href="https://github.com/saurabh-agrahari"
+                href="https://github.com/Saurabh64377"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-secondary text-sm gap-2"
@@ -153,7 +155,7 @@ export default function About() {
               </motion.div>
             ))}
 
-            {/* Dream Card */}
+            {/* Focus Card */}
             <motion.div
               variants={staggerItemVariants}
               className="col-span-2 glass-card rounded-2xl p-5 animated-border"
@@ -161,15 +163,15 @@ export default function About() {
               <div className="flex items-start gap-4">
                 <div
                   className="w-11 h-11 rounded-xl flex items-center justify-center shrink-0"
-                  style={{ background: 'rgba(108,99,255,0.12)', border: '1px solid rgba(108,99,255,0.2)' }}
+                  style={{ background: 'rgba(59,130,246,0.12)', border: '1px solid rgba(59,130,246,0.2)' }}
                 >
-                  <span className="text-xl">🚀</span>
+                  <span className="text-xl">🔐</span>
                 </div>
                 <div>
-                  <div className="font-semibold text-white text-sm mb-1">Big Dream</div>
+                  <div className="font-semibold text-white text-sm mb-1">What I Care About</div>
                   <p className="text-white/45 text-xs leading-relaxed">
-                    Passionate about building products that scale. My ultimate goal is to found a
-                    software company that creates tools developers love.
+                    Getting authentication, role-based permissions, and deployment right — the parts
+                    of an app that don't show up in a demo but decide whether it survives production.
                   </p>
                 </div>
               </div>

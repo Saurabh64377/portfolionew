@@ -7,8 +7,8 @@ import { useMagneticEffect } from '../../hooks/useMagneticEffect'
 const navLinks = [
   { label: 'About', href: '#about' },
   { label: 'Skills', href: '#skills' },
+  { label: 'Experience', href: '#experience' },
   { label: 'Projects', href: '#projects' },
-  { label: 'Services', href: '#services' },
   { label: 'Contact', href: '#contact' },
 ]
 
@@ -24,11 +24,11 @@ function NavLogo() {
     >
       <div
         className="w-10 h-10 rounded-xl flex items-center justify-center font-black text-white text-lg relative overflow-hidden"
-        style={{ background: 'linear-gradient(135deg, #6c63ff, #a855f7)' }}
+        style={{ background: 'linear-gradient(135deg, #3B82F6, #8B5CF6)' }}
       >
         <span className="relative z-10">S</span>
         <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-          style={{ background: 'linear-gradient(135deg, #a855f7, #ec4899)' }} />
+          style={{ background: 'linear-gradient(135deg, #8B5CF6, #06B6D4)' }} />
       </div>
       <span className="hidden sm:block font-bold text-white/90 text-sm tracking-wide">
         Saurabh<span className="text-accent">.</span>

@@ -18,9 +18,7 @@ const About = lazy(() => import('./components/sections/About'))
 const Skills = lazy(() => import('./components/sections/Skills'))
 const Experience = lazy(() => import('./components/sections/Experience'))
 const Projects = lazy(() => import('./components/sections/Projects'))
-const Services = lazy(() => import('./components/sections/Services'))
 const Achievements = lazy(() => import('./components/sections/Achievements'))
-const Testimonials = lazy(() => import('./components/sections/Testimonials'))
 const Contact = lazy(() => import('./components/sections/Contact'))
 
 gsap.registerPlugin(ScrollTrigger)
@@ -89,13 +87,7 @@ export default function App() {
             <Projects />
           </Suspense>
           <Suspense fallback={<SectionFallback />}>
-            <Services />
-          </Suspense>
-          <Suspense fallback={<SectionFallback />}>
             <Achievements />
-          </Suspense>
-          <Suspense fallback={<SectionFallback />}>
-            <Testimonials />
           </Suspense>
           <Suspense fallback={<SectionFallback />}>
             <Contact />

@@ -1,24 +1,16 @@
 import { useState, useRef } from 'react'
 import { motion } from 'framer-motion'
 import emailjs from '@emailjs/browser'
-import { FiMail, FiPhone, FiMapPin, FiGithub, FiLinkedin, FiTwitter, FiSend, FiCheck, FiAlertCircle } from 'react-icons/fi'
+import { FiMail, FiPhone, FiMapPin, FiGithub, FiLinkedin, FiSend, FiCheck, FiAlertCircle } from 'react-icons/fi'
 import { useScrollAnimation, slideLeftVariants, slideRightVariants } from '../../hooks/useScrollAnimation'
 import SectionHeading from '../ui/SectionHeading'
 
-// ─────────────────────────────────────────────
-//  EmailJS Configuration
-//  Step 1: https://www.emailjs.com/ par account banao (free)
-//  Step 2: "Email Services" → Gmail add karo → Service ID copy karo
-//  Step 3: "Email Templates" → template banao → Template ID copy karo
-//  Step 4: "Account" → Public Key copy karo
-//  Step 5: Niche ke values update karo
-// ─────────────────────────────────────────────
-const EMAILJS_SERVICE_ID  = 'service_e4xzhgl'   // apna Service ID
-const EMAILJS_TEMPLATE_ID = 'template_j8w4k44'  // apna Template ID
-const EMAILJS_PUBLIC_KEY  = 'ps7gprqjAYQADhly5' // apna Public Key
+// EmailJS configuration — service/template/public key from emailjs.com
+const EMAILJS_SERVICE_ID  = 'service_e4xzhgl'
+const EMAILJS_TEMPLATE_ID = 'template_j8w4k44'
+const EMAILJS_PUBLIC_KEY  = 'ps7gprqjAYQADhly5'
 
-// Template variables (EmailJS template mein ye names use karo):
-// {{from_name}}, {{from_email}}, {{subject}}, {{message}}, {{to_name}}
+// Template variables used: {{from_name}}, {{from_email}}, {{subject}}, {{message}}, {{to_name}}
 
 const contactInfo = [
   {
@@ -26,28 +18,27 @@ const contactInfo = [
     label: 'Email',
     value: 'saurabh64377@gmail.com',
     href: 'mailto:saurabh64377@gmail.com',
-    color: '#6c63ff',
+    color: '#3B82F6',
   },
   {
     icon: FiPhone,
     label: 'Phone',
     value: '+91 8853953602',
     href: 'tel:+918853953602',
-    color: '#43e97b',
+    color: '#8B5CF6',
   },
   {
     icon: FiMapPin,
     label: 'Location',
-    value: 'India (Open to Remote)',
+    value: 'Gorakhpur, India (Open to Remote)',
     href: null,
-    color: '#f093fb',
+    color: '#06B6D4',
   },
 ]
 
 const socialLinks = [
-  { icon: FiGithub,   href: 'https://github.com/saurabh-agrahari',   label: 'GitHub' },
-  { icon: FiLinkedin, href: 'https://linkedin.com/in/saurabh-agrahari', label: 'LinkedIn' },
-  { icon: FiTwitter,  href: 'https://twitter.com/saurabh_agrahari',   label: 'Twitter' },
+  { icon: FiGithub,   href: 'https://github.com/Saurabh64377',   label: 'GitHub' },
+  { icon: FiLinkedin, href: 'https://www.linkedin.com/in/saurabh-agrahari-509459248/', label: 'LinkedIn' },
 ]
 
 export default function Contact() {
@@ -65,11 +56,11 @@ export default function Contact() {
 
   const validate = () => {
     const e = {}
-    if (!form.from_name.trim())  e.from_name  = 'Naam zaroori hai'
-    if (!form.from_email.trim()) e.from_email = 'Email zaroori hai'
+    if (!form.from_name.trim())  e.from_name  = 'Name is required'
+    if (!form.from_email.trim()) e.from_email = 'Email is required'
     else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.from_email))
-      e.from_email = 'Galat email format'
-    if (!form.message.trim())    e.message    = 'Message zaroori hai'
+      e.from_email = 'Enter a valid email address'
+    if (!form.message.trim())    e.message    = 'Message is required'
     return e
   }
 
@@ -181,9 +172,9 @@ export default function Contact() {
             <div className="glass-card rounded-2xl p-5 flex items-center gap-4 animated-border">
               <div className="w-3 h-3 rounded-full bg-emerald-400 animate-pulse shrink-0" />
               <div>
-                <div className="text-white font-semibold text-sm">Available for Work</div>
+                <div className="text-white font-semibold text-sm">Open to New Opportunities</div>
                 <div className="text-white/40 text-xs mt-0.5">
-                  Open to full-time, part-time, and freelance opportunities
+                  Currently at Whizlancer, open to new full-time roles and collaborations
                 </div>
               </div>
             </div>
@@ -202,7 +193,7 @@ export default function Contact() {
               <div className="grid sm:grid-cols-2 gap-4">
                 <div>
                   <label className="block text-white/40 text-xs font-mono mb-2 uppercase tracking-wide">
-                    Aapka Naam *
+                    Your Name *
                   </label>
                   <input
                     name="from_name"
@@ -278,19 +269,19 @@ export default function Contact() {
                 {status === 'sending' && (
                   <>
                     <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
-                    Bhej raha hoon...
+                    Sending...
                   </>
                 )}
                 {status === 'sent' && (
                   <>
                     <FiCheck size={16} />
-                    Message Bhej Diya!
+                    Message Sent!
                   </>
                 )}
                 {(status === 'idle' || status === 'error') && (
                   <>
                     <FiSend size={16} />
-                    Message Bhejo
+                    Send Message
                   </>
                 )}
               </button>
@@ -304,7 +295,7 @@ export default function Contact() {
                 >
                   <FiCheck size={16} className="text-emerald-400 shrink-0" />
                   <p className="text-emerald-400 text-sm">
-                    Message successfully bhej diya! Main 24 ghante mein reply karunga.
+                    Message sent successfully! I'll get back to you within 24 hours.
                   </p>
                 </motion.div>
               )}
@@ -318,9 +309,9 @@ export default function Contact() {
                 >
                   <FiAlertCircle size={16} className="text-red-400 shrink-0" />
                   <div>
-                    <p className="text-red-400 text-sm font-medium">Message nahi gaya!</p>
+                    <p className="text-red-400 text-sm font-medium">Message failed to send</p>
                     <p className="text-red-400/70 text-xs mt-0.5">
-                      Directly email karo:{' '}
+                      Please email me directly:{' '}
                       <a href="mailto:saurabh64377@gmail.com" className="underline hover:text-red-300">
                         saurabh64377@gmail.com
                       </a>
@@ -329,15 +320,15 @@ export default function Contact() {
                 </motion.div>
               )}
 
-              {/* EmailJS Setup Note — development mein remove karo */}
+              {/* EmailJS setup reminder — remove once configured */}
               {EMAILJS_SERVICE_ID === 'service_XXXXXXX' && (
                 <div className="p-3 rounded-xl bg-yellow-500/08 border border-yellow-500/15">
                   <p className="text-yellow-400/70 text-xs leading-relaxed">
                     <span className="font-semibold text-yellow-400">Setup Required:</span>{' '}
-                    EmailJS configure karo. Contact.jsx mein{' '}
+                    Configure EmailJS by updating{' '}
                     <code className="bg-white/05 px-1 rounded">EMAILJS_SERVICE_ID</code>,{' '}
-                    <code className="bg-white/05 px-1 rounded">EMAILJS_TEMPLATE_ID</code> aur{' '}
-                    <code className="bg-white/05 px-1 rounded">EMAILJS_PUBLIC_KEY</code> update karo.
+                    <code className="bg-white/05 px-1 rounded">EMAILJS_TEMPLATE_ID</code> and{' '}
+                    <code className="bg-white/05 px-1 rounded">EMAILJS_PUBLIC_KEY</code> in Contact.jsx.
                   </p>
                 </div>
               )}

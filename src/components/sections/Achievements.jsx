@@ -1,55 +1,68 @@
 import { motion } from 'framer-motion'
 import CountUp from 'react-countup'
 import { useInView } from 'react-intersection-observer'
-import { FiCode, FiPackage, FiCpu, FiAward } from 'react-icons/fi'
+import { FiPackage, FiShield, FiRefreshCw, FiBriefcase } from 'react-icons/fi'
 import { useScrollAnimation, staggerContainerVariants, staggerItemVariants } from '../../hooks/useScrollAnimation'
 import SectionHeading from '../ui/SectionHeading'
 
 const stats = [
   {
-    value: 7,
-    suffix: '+',
-    label: 'Projects Built',
-    desc: 'Full-stack applications from concept to deployment',
+    value: 4,
+    suffix: '',
+    label: 'Production Projects',
+    desc: 'Full-stack applications shipped from concept to deployment',
     icon: FiPackage,
-    color: '#6c63ff',
-    bg: 'rgba(108,99,255,0.1)',
+    color: '#3B82F6',
+    bg: 'rgba(59,130,246,0.1)',
   },
   {
-    value: 15,
+    value: 1,
     suffix: '+',
-    label: 'Technologies',
-    desc: 'Languages, frameworks and tools mastered',
-    icon: FiCpu,
-    color: '#43e97b',
-    bg: 'rgba(67,233,123,0.1)',
+    label: 'Years Experience',
+    desc: 'Professional full-stack development, internship through full-time',
+    icon: FiBriefcase,
+    color: '#8B5CF6',
+    bg: 'rgba(139,92,246,0.1)',
   },
   {
-    value: 5000,
-    suffix: '+',
-    label: 'Lines of Code',
-    desc: 'Written with clean architecture in mind',
-    icon: FiCode,
-    color: '#38f9d7',
-    bg: 'rgba(56,249,215,0.1)',
+    value: 2,
+    suffix: '',
+    label: 'Live Deployments',
+    desc: 'Production sites running on AWS EC2 with Nginx and SSL',
+    icon: FiRefreshCw,
+    color: '#06B6D4',
+    bg: 'rgba(6,182,212,0.1)',
   },
   {
-    value: 100,
-    suffix: '%',
-    label: 'Dedication',
-    desc: 'Committed to delivering quality products',
-    icon: FiAward,
-    color: '#f093fb',
-    bg: 'rgba(240,147,251,0.1)',
+    value: 2,
+    suffix: '',
+    label: 'Companies',
+    desc: 'Whizlancer Pvt. Ltd. and RAI Tech Corporation',
+    icon: FiShield,
+    color: '#10B981',
+    bg: 'rgba(16,185,129,0.1)',
   },
 ]
 
-const milestones = [
-  { year: '2021', event: 'Started BCA — began learning programming' },
-  { year: '2022', event: 'Built first HTML/CSS projects, learned JavaScript' },
-  { year: '2023', event: 'Dove into MERN stack, built first full-stack app' },
-  { year: '2024', event: 'Completed 7+ production-grade projects, BCA graduate' },
-  { year: '2024+', event: 'Seeking Full Stack Developer opportunities' },
+const achievementCards = [
+  {
+    title: 'Shipped Production Software',
+    desc: 'Successfully launched 3+ production applications from concept to deployment, owning the full lifecycle from schema design to going live.',
+    icon: '🚀',
+    color: '#3B82F6',
+  },
+  {
+    title: 'Enterprise-Grade Authentication',
+    desc: 'Implemented JWT-based authentication and role-based access control across multiple client projects, spanning 4-5 distinct user roles per system.',
+    icon: '🔐',
+    color: '#8B5CF6',
+  },
+  {
+    title: 'Automated Deployment Workflows',
+    desc: 'Automated CI/CD deployment pipelines and configured production infrastructure on AWS EC2 with Nginx and PM2.',
+    icon: '⚙️',
+    color: '#06B6D4',
+  },
 ]
 
 function StatCard({ stat, index }) {
@@ -90,7 +103,7 @@ export default function Achievements() {
     <section id="achievements" className="relative py-28 overflow-hidden">
       <div
         className="absolute inset-0 pointer-events-none"
-        style={{ background: 'radial-gradient(ellipse 60% 50% at 50% 50%, rgba(108,99,255,0.06) 0%, transparent 70%)' }}
+        style={{ background: 'radial-gradient(ellipse 60% 50% at 50% 50%, rgba(59,130,246,0.06) 0%, transparent 70%)' }}
       />
 
       <div ref={ref} className="section-container relative z-10">
@@ -98,7 +111,7 @@ export default function Achievements() {
           tag="Achievements"
           title="By The"
           highlight="Numbers"
-          subtitle="Measurable milestones from my development journey — every line of code written with purpose."
+          subtitle="Honest milestones from my development journey so far — every one of them real and shipped."
           inView={inView}
         />
 
@@ -114,35 +127,29 @@ export default function Achievements() {
           ))}
         </motion.div>
 
-        {/* Milestones Timeline */}
+        {/* Achievement Cards */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ delay: 0.4, duration: 0.7 }}
-          className="mt-20"
+          variants={staggerContainerVariants}
+          initial="hidden"
+          animate={inView ? 'visible' : 'hidden'}
+          className="grid md:grid-cols-3 gap-6 mt-10"
         >
-          <h3 className="text-center text-white/40 text-xs font-mono tracking-[3px] uppercase mb-10">
-            Development Journey
-          </h3>
-          <div className="relative flex flex-col sm:flex-row justify-between items-start sm:items-center gap-6 sm:gap-0">
-            {/* Line */}
-            <div className="hidden sm:block absolute left-0 right-0 top-5 h-px bg-gradient-to-r from-transparent via-accent/20 to-transparent" />
-
-            {milestones.map((m, i) => (
-              <div key={i} className="flex sm:flex-col items-start sm:items-center gap-3 sm:gap-3 relative z-10 flex-1">
-                <div
-                  className="w-10 h-10 rounded-full flex items-center justify-center text-xs font-mono font-bold shrink-0"
-                  style={{ background: 'rgba(108,99,255,0.15)', border: '1px solid rgba(108,99,255,0.25)', color: '#a5a0ff' }}
-                >
-                  {m.year.slice(-2)}
-                </div>
-                <div className="sm:text-center">
-                  <div className="text-accent/80 text-xs font-mono font-bold mb-0.5">{m.year}</div>
-                  <div className="text-white/40 text-xs leading-snug max-w-[120px]">{m.event}</div>
-                </div>
+          {achievementCards.map((card) => (
+            <motion.div
+              key={card.title}
+              variants={staggerItemVariants}
+              className="glass-card rounded-2xl p-6"
+            >
+              <div
+                className="w-11 h-11 rounded-xl flex items-center justify-center mb-4"
+                style={{ background: `${card.color}15`, border: `1px solid ${card.color}25` }}
+              >
+                <span className="text-xl">{card.icon}</span>
               </div>
-            ))}
-          </div>
+              <h3 className="text-white font-semibold text-sm mb-2">{card.title}</h3>
+              <p className="text-white/45 text-xs leading-relaxed">{card.desc}</p>
+            </motion.div>
+          ))}
         </motion.div>
       </div>
     </section>

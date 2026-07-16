@@ -7,15 +7,12 @@ import SectionHeading from '../ui/SectionHeading'
 
 const ProjectMockup = ({ project }) => {
   const colors = {
-    'from-violet-600/20 to-purple-600/20': { bg: '#6c63ff', lines: ['#a5a0ff', '#7c75ff', '#6c63ff'] },
-    'from-emerald-600/20 to-teal-600/20': { bg: '#43e97b', lines: ['#6fffa3', '#43e97b', '#38d97b'] },
-    'from-blue-600/20 to-cyan-600/20': { bg: '#38f9d7', lines: ['#6bffed', '#38f9d7', '#00dbc8'] },
-    'from-orange-600/20 to-red-600/20': { bg: '#f093fb', lines: ['#f5b3fc', '#f093fb', '#e070f0'] },
-    'from-pink-600/20 to-rose-600/20': { bg: '#ec4899', lines: ['#f472b6', '#ec4899', '#db2777'] },
-    'from-yellow-600/20 to-amber-600/20': { bg: '#f59e0b', lines: ['#fbbf24', '#f59e0b', '#d97706'] },
-    'from-purple-600/20 to-indigo-600/20': { bg: '#a855f7', lines: ['#c084fc', '#a855f7', '#9333ea'] },
+    blue: { bg: '#3B82F6', lines: ['#93C5FD', '#60A5FA', '#3B82F6'] },
+    purple: { bg: '#8B5CF6', lines: ['#C4B5FD', '#A78BFA', '#8B5CF6'] },
+    cyan: { bg: '#06B6D4', lines: ['#67E8F9', '#22D3EE', '#06B6D4'] },
+    emerald: { bg: '#10B981', lines: ['#6EE7B7', '#34D399', '#10B981'] },
   }
-  const c = colors[project.gradient] || colors['from-violet-600/20 to-purple-600/20']
+  const c = colors[project.gradient] || colors.blue
 
   return (
     <div
@@ -69,20 +66,22 @@ function ProjectCard({ project, index }) {
         <ProjectMockup project={project} />
         {project.featured && (
           <div className="absolute top-3 right-3 px-2.5 py-1 rounded-full text-xs font-mono"
-            style={{ background: 'rgba(108,99,255,0.3)', border: '1px solid rgba(108,99,255,0.4)', color: '#a5a0ff' }}>
+            style={{ background: 'rgba(59,130,246,0.3)', border: '1px solid rgba(59,130,246,0.4)', color: '#93C5FD' }}>
             Featured
           </div>
         )}
         {/* Hover overlay */}
         <div className="project-card-overlay flex items-center justify-center gap-3 group-hover:opacity-100">
-          <a
-            href={project.live}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-10 h-10 rounded-xl bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-white hover:bg-accent/30 transition-all duration-300 hover:scale-110"
-          >
-            <FiExternalLink size={16} />
-          </a>
+          {project.live && (
+            <a
+              href={project.live}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-10 h-10 rounded-xl bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-white hover:bg-accent/30 transition-all duration-300 hover:scale-110"
+            >
+              <FiExternalLink size={16} />
+            </a>
+          )}
           <a
             href={project.github}
             target="_blank"
@@ -113,16 +112,34 @@ function ProjectCard({ project, index }) {
           )}
         </div>
 
-        {/* Stats + Links */}
-        <div className="flex items-center justify-between">
-          <div className="flex gap-4">
-            {Object.entries(project.stats).map(([k, v]) => (
-              <div key={k} className="text-center">
-                <div className="text-white font-bold text-sm" style={{ color: project.accentColor }}>{v}</div>
-                <div className="text-white/30 text-[10px] capitalize font-mono">{k}</div>
-              </div>
-            ))}
-          </div>
+        {/* Features */}
+        <ul className="space-y-1.5 mb-5">
+          {project.features.slice(0, 2).map((feat) => (
+            <li key={feat} className="flex items-start gap-2 text-xs text-white/40 leading-relaxed">
+              <span
+                className="w-1.5 h-1.5 rounded-full shrink-0 mt-1"
+                style={{ background: project.accentColor }}
+              />
+              {feat}
+            </li>
+          ))}
+        </ul>
+
+        {/* Links */}
+        <div className="flex items-center justify-between pt-4 border-t border-white/06">
+          {project.live ? (
+            <a
+              href={project.live}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xs font-mono"
+              style={{ color: project.accentColor }}
+            >
+              Live Demo →
+            </a>
+          ) : (
+            <span className="text-xs font-mono text-white/25">{project.liveLabel || 'No Live Demo'}</span>
+          )}
           <a
             href={project.github}
             target="_blank"
@@ -150,7 +167,6 @@ export default function Projects() {
     all: 'All Projects',
     fullstack: 'Full Stack',
     frontend: 'Frontend',
-    backend: 'Backend',
   }
 
   return (
@@ -216,7 +232,7 @@ export default function Projects() {
           className="flex justify-center mt-14"
         >
           <a
-            href="https://github.com/saurabh-agrahari"
+            href="https://github.com/Saurabh64377"
             target="_blank"
             rel="noopener noreferrer"
             className="btn-secondary gap-2 group"

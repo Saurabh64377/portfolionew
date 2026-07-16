@@ -75,8 +75,8 @@ export default function ScrollToTop() {
             />
             <defs>
               <linearGradient id="scrollGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop offset="0%"   stopColor="#6c63ff" />
-                <stop offset="100%" stopColor="#a855f7" />
+                <stop offset="0%"   stopColor="#3B82F6" />
+                <stop offset="100%" stopColor="#8B5CF6" />
               </linearGradient>
             </defs>
           </svg>
@@ -85,8 +85,8 @@ export default function ScrollToTop() {
           <div
             className="w-12 h-12 rounded-full flex items-center justify-center relative z-10 transition-all duration-300"
             style={{
-              background: 'rgba(10,10,15,0.85)',
-              border: '1px solid rgba(108,99,255,0.25)',
+              background: 'rgba(11,17,32,0.85)',
+              border: '1px solid rgba(59,130,246,0.25)',
               backdropFilter: 'blur(20px)',
               boxShadow: '0 4px 24px rgba(0,0,0,0.4)',
             }}
@@ -106,7 +106,7 @@ export default function ScrollToTop() {
           <span
             className="absolute right-14 top-1/2 -translate-y-1/2 whitespace-nowrap text-xs text-white/60 bg-black/60 backdrop-blur-md px-3 py-1.5 rounded-lg border border-white/08 opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity duration-300"
           >
-            Top pe jao
+Back to top
           </span>
         </motion.button>
       )}

@@ -8,19 +8,20 @@
    CSS CUSTOM PROPERTIES
    ============================================ */
 :root {
-  --color-primary: #0a0a0f;
-  --color-secondary: #111118;
-  --color-accent: #6c63ff;
-  --color-accent-2: #a855f7;
-  --color-accent-3: #43e97b;
-  --color-text: #f1f0ff;
-  --color-text-muted: #8b8b9e;
+  --color-primary: #0B1120;
+  --color-secondary: #111827;
+  --color-accent: #3B82F6;
+  --color-accent-2: #8B5CF6;
+  --color-accent-3: #06B6D4;
+  --color-success: #10B981;
+  --color-text: #F8FAFC;
+  --color-text-muted: #94A3B8;
   --font-display: 'Inter', sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
 
-  --gradient-accent: linear-gradient(135deg, #6c63ff 0%, #a855f7 50%, #ec4899 100%);
-  --gradient-hero: radial-gradient(ellipse 80% 80% at 50% -20%, rgba(108,99,255,0.3) 0%, transparent 60%);
-  --shadow-glow: 0 0 40px rgba(108,99,255,0.4);
+  --gradient-accent: linear-gradient(135deg, #3B82F6 0%, #8B5CF6 50%, #06B6D4 100%);
+  --gradient-hero: radial-gradient(ellipse 80% 80% at 50% -20%, rgba(59,130,246,0.3) 0%, transparent 60%);
+  --shadow-glow: 0 0 40px rgba(59,130,246,0.4);
 
   --transition-smooth: cubic-bezier(0.4, 0, 0.2, 1);
   --transition-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
@@ -64,11 +65,11 @@ body.lenis-scrolling {
   background: var(--color-primary);
 }
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #6c63ff, #a855f7);
+  background: linear-gradient(180deg, #3B82F6, #8B5CF6);
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, #a855f7, #ec4899);
+  background: linear-gradient(180deg, #8B5CF6, #06B6D4);
 }
 
 /* ============================================
@@ -85,7 +86,7 @@ body.lenis-scrolling {
 .cursor-dot {
   width: 6px;
   height: 6px;
-  background: #6c63ff;
+  background: #3B82F6;
   border-radius: 50%;
   position: fixed;
   top: 0;
@@ -144,7 +145,7 @@ body.lenis-scrolling {
 
 .glass-card:hover {
   border-color: rgba(108, 99, 255, 0.3);
-  box-shadow: 0 20px 60px rgba(0,0,0,0.5), 0 0 40px rgba(108,99,255,0.1), inset 0 1px 0 rgba(255,255,255,0.1);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5), 0 0 40px rgba(59,130,246,0.1), inset 0 1px 0 rgba(255,255,255,0.1);
 }
 
 /* ============================================
@@ -158,14 +159,14 @@ body.lenis-scrolling {
 }
 
 .gradient-text-green {
-  background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+  background: linear-gradient(135deg, #10B981 0%, #06B6D4 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 .gradient-text-blue {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #3B82F6 0%, #8B5CF6 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -204,8 +205,8 @@ body.lenis-scrolling {
    ============================================ */
 .bg-grid {
   background-image:
-    linear-gradient(rgba(108,99,255,0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(108,99,255,0.03) 1px, transparent 1px);
+    linear-gradient(rgba(59,130,246,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(59,130,246,0.03) 1px, transparent 1px);
   background-size: 60px 60px;
 }
 
@@ -243,7 +244,7 @@ body.lenis-scrolling {
   inset: 0;
   border-radius: inherit;
   padding: 1px;
-  background: linear-gradient(135deg, #6c63ff, #a855f7, #ec4899, #6c63ff);
+  background: linear-gradient(135deg, #3B82F6, #8B5CF6, #06B6D4, #3B82F6);
   background-size: 300% 300%;
   animation: gradient 4s ease infinite;
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
@@ -308,7 +309,7 @@ body.lenis-scrolling {
 .progress-fill {
   height: 100%;
   border-radius: 10px;
-  background: linear-gradient(90deg, #6c63ff, #a855f7);
+  background: linear-gradient(90deg, #3B82F6, #8B5CF6);
   transform-origin: left;
   transition: transform 1.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -327,7 +328,7 @@ body.lenis-scrolling {
   left: 0;
   width: 0;
   height: 1.5px;
-  background: linear-gradient(90deg, #6c63ff, #a855f7);
+  background: linear-gradient(90deg, #3B82F6, #8B5CF6);
   transition: width 0.3s ease;
 }
 
@@ -344,7 +345,7 @@ body.lenis-scrolling {
   top: 0;
   left: 0;
   height: 2px;
-  background: linear-gradient(90deg, #6c63ff, #a855f7, #ec4899);
+  background: linear-gradient(90deg, #3B82F6, #8B5CF6, #06B6D4);
   z-index: 10000;
   transform-origin: left;
 }
@@ -358,7 +359,7 @@ body.lenis-scrolling {
   gap: 8px;
   padding: 14px 32px;
   border-radius: 100px;
-  background: linear-gradient(135deg, #6c63ff, #a855f7);
+  background: linear-gradient(135deg, #3B82F6, #8B5CF6);
   color: white;
   font-weight: 600;
   font-size: 14px;
@@ -386,7 +387,7 @@ body.lenis-scrolling {
 }
 
 .btn-primary:hover {
-  box-shadow: 0 0 40px rgba(108,99,255,0.5), 0 8px 24px rgba(0,0,0,0.3);
+  box-shadow: 0 0 40px rgba(59,130,246,0.5), 0 8px 24px rgba(0,0,0,0.3);
   transform: translateY(-2px);
 }
 
@@ -412,9 +413,9 @@ body.lenis-scrolling {
 }
 
 .btn-secondary:hover {
-  border-color: rgba(108,99,255,0.5);
-  background: rgba(108,99,255,0.08);
-  box-shadow: 0 0 20px rgba(108,99,255,0.2);
+  border-color: rgba(59,130,246,0.5);
+  background: rgba(59,130,246,0.08);
+  box-shadow: 0 0 20px rgba(59,130,246,0.2);
   transform: translateY(-2px);
 }
 
@@ -427,9 +428,9 @@ body.lenis-scrolling {
   gap: 4px;
   padding: 4px 12px;
   border-radius: 100px;
-  background: rgba(108,99,255,0.1);
-  border: 1px solid rgba(108,99,255,0.2);
-  color: #a5a0ff;
+  background: rgba(59,130,246,0.1);
+  border: 1px solid rgba(59,130,246,0.2);
+  color: #93C5FD;
   font-size: 11px;
   font-weight: 500;
   letter-spacing: 0.5px;
@@ -438,8 +439,8 @@ body.lenis-scrolling {
 }
 
 .tech-badge:hover {
-  background: rgba(108,99,255,0.2);
-  border-color: rgba(108,99,255,0.4);
+  background: rgba(59,130,246,0.2);
+  border-color: rgba(59,130,246,0.4);
   color: #c4c1ff;
 }
 
@@ -475,9 +476,9 @@ body.lenis-scrolling {
   gap: 8px;
   padding: 6px 16px;
   border-radius: 100px;
-  background: rgba(108,99,255,0.08);
-  border: 1px solid rgba(108,99,255,0.15);
-  color: #a5a0ff;
+  background: rgba(59,130,246,0.08);
+  border: 1px solid rgba(59,130,246,0.15);
+  color: #93C5FD;
   font-size: 12px;
   font-weight: 600;
   letter-spacing: 2px;
@@ -490,7 +491,7 @@ body.lenis-scrolling {
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: #6c63ff;
+  background: #3B82F6;
   animation: pulse 2s ease-in-out infinite;
 }
 
@@ -503,7 +504,7 @@ body.lenis-scrolling {
   top: 0;
   bottom: 0;
   width: 1px;
-  background: linear-gradient(180deg, transparent, rgba(108,99,255,0.4) 20%, rgba(108,99,255,0.4) 80%, transparent);
+  background: linear-gradient(180deg, transparent, rgba(59,130,246,0.4) 20%, rgba(59,130,246,0.4) 80%, transparent);
   transform: translateX(-50%);
 }
 
@@ -511,9 +512,9 @@ body.lenis-scrolling {
   width: 14px;
   height: 14px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #6c63ff, #a855f7);
+  background: linear-gradient(135deg, #3B82F6, #8B5CF6);
   border: 3px solid var(--color-primary);
-  box-shadow: 0 0 20px rgba(108,99,255,0.5);
+  box-shadow: 0 0 20px rgba(59,130,246,0.5);
   position: relative;
   z-index: 2;
 }
@@ -552,23 +553,6 @@ body.lenis-scrolling {
 }
 
 /* ============================================
-   SWIPER CUSTOMIZATION
-   ============================================ */
-.swiper-pagination-bullet {
-  background: rgba(255,255,255,0.2) !important;
-  opacity: 1 !important;
-  width: 6px !important;
-  height: 6px !important;
-  transition: all 0.3s ease !important;
-}
-
-.swiper-pagination-bullet-active {
-  background: #6c63ff !important;
-  width: 24px !important;
-  border-radius: 4px !important;
-}
-
-/* ============================================
    FORM STYLES
    ============================================ */
 .form-input {
@@ -589,9 +573,9 @@ body.lenis-scrolling {
 }
 
 .form-input:focus {
-  border-color: rgba(108,99,255,0.5);
-  background: rgba(108,99,255,0.04);
-  box-shadow: 0 0 0 3px rgba(108,99,255,0.1);
+  border-color: rgba(59,130,246,0.5);
+  background: rgba(59,130,246,0.04);
+  box-shadow: 0 0 0 3px rgba(59,130,246,0.1);
 }
 
 /* ============================================
@@ -635,7 +619,7 @@ body.lenis-scrolling {
   display: inline-block;
   width: 3px;
   height: 1.1em;
-  background: #6c63ff;
+  background: #3B82F6;
   margin-left: 4px;
   vertical-align: text-bottom;
   border-radius: 2px;

@@ -14,14 +14,14 @@ const roles = [
 ]
 
 const socialLinks = [
-  { icon: FiGithub, href: 'https://github.com/saurabh-agrahari', label: 'GitHub' },
-  { icon: FiLinkedin, href: 'https://linkedin.com/in/saurabh-agrahari', label: 'LinkedIn' },
+  { icon: FiGithub, href: 'https://github.com/Saurabh64377', label: 'GitHub' },
+  { icon: FiLinkedin, href: 'https://www.linkedin.com/in/saurabh-agrahari-509459248/', label: 'LinkedIn' },
 ]
 
 const stats = [
-  { value: '7+', label: 'Projects Built' },
-  { value: '15+', label: 'Technologies' },
-  { value: '1+', label: 'Years Coding' },
+  { value: '1+', label: 'Years Experience' },
+  { value: '4', label: 'Production Projects' },
+  { value: '2', label: 'Companies' },
 ]
 
 export default function Hero() {
@@ -68,7 +68,7 @@ export default function Hero() {
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
-          background: 'radial-gradient(ellipse 80% 60% at 50% 0%, rgba(108,99,255,0.15) 0%, transparent 65%)',
+          background: 'radial-gradient(ellipse 80% 60% at 50% 0%, rgba(59,130,246,0.15) 0%, transparent 65%)',
         }}
       />
       <div
@@ -92,7 +92,7 @@ export default function Hero() {
           >
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-strong border border-white/10 text-sm text-white/60">
               <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-              Available for new opportunities
+              Open to new opportunities
             </div>
           </motion.div>
 
@@ -130,9 +130,10 @@ export default function Hero() {
             transition={{ delay: 2.2, duration: 0.7 }}
             className="text-white/45 text-base sm:text-lg max-w-2xl leading-relaxed"
           >
-            Fresher Full Stack Developer passionate about building scalable web applications.
-            Specialized in the <span className="text-white/70">MERN Stack</span> — crafting
-            seamless experiences from pixel-perfect UIs to robust backends.
+            Currently building production applications as a Full Stack Developer at{' '}
+            <span className="text-white/70">Whizlancer Pvt. Ltd.</span> Specialized in the{' '}
+            <span className="text-white/70">React / Node.js stack</span> — from secure,
+            role-based backends to pixel-perfect, deployment-ready UIs.
           </motion.p>
 
           {/* CTA Buttons */}

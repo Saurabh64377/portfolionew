@@ -129,6 +129,26 @@ export const projects = [
       'End-to-end MERN data flow practice, from API to UI',
     ],
   },
+  {
+    id: 7,
+    title: 'The Tiger Fitness',
+    description:
+      'A live business website for The Tiger Fitness, a premium gym in Padrauna, Kushinagar — built with React and Vite and deployed to production on Vercel.',
+    longDescription:
+      'A real-world client site built with a modern React + Vite frontend, taken from a fresh build through to a live public deployment on Vercel.',
+    tags: ['React', 'Vite', 'CSS', 'Vercel'],
+    category: 'frontend',
+    featured: false,
+    github: 'https://github.com/Saurabh64377/thetigerfitnessgym',
+    live: 'https://thetigerfitnessgym.vercel.app/',
+    gradient: 'cyan',
+    accentColor: '#06B6D4',
+    features: [
+      'React + Vite frontend built for fast development and load times',
+      'Live public site for a real gym business in Padrauna, Kushinagar',
+      'Deployed to production on Vercel',
+    ],
+  },
 ]
 
 export const categories = ['all', 'fullstack', 'frontend']

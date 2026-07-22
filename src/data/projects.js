@@ -15,7 +15,7 @@ export const projects = [
     live: null,
     liveLabel: 'Private Client Project',
     gradient: 'blue',
-    accentColor: '#3B82F6',
+    accentColor: '#4F8CF7',
     features: [
       'Role-based access control for admins, teachers, students and parents',
       'Attendance tracking with daily and term-level reporting',
@@ -37,7 +37,7 @@ export const projects = [
     live: null,
     liveLabel: 'Private Client Project',
     gradient: 'purple',
-    accentColor: '#8B5CF6',
+    accentColor: '#9B87F5',
     features: [
       'Multi-tenant architecture — one Superadmin, many independently-scoped schools',
       'JWT authentication with role-based access for Superadmin, School Admin, Teacher and Student',
@@ -58,7 +58,7 @@ export const projects = [
     github: GITHUB_PROFILE,
     live: 'https://terastamp.org',
     gradient: 'cyan',
-    accentColor: '#06B6D4',
+    accentColor: '#2AB8D4',
     features: [
       'Responsive React frontend with reusable, modern UI components',
       'REST API endpoint for contact form submissions via Node.js and Express.js',
@@ -79,7 +79,7 @@ export const projects = [
     github: GITHUB_PROFILE,
     live: 'https://cinu.io',
     gradient: 'emerald',
-    accentColor: '#10B981',
+    accentColor: '#34D399',
     features: [
       'Responsive company website with reusable UI components',
       'Client-side routing and navigation with React Router',
@@ -100,7 +100,7 @@ export const projects = [
     live: null,
     liveLabel: 'No Live Demo',
     gradient: 'blue',
-    accentColor: '#3B82F6',
+    accentColor: '#4F8CF7',
     features: [
       'Five-page React frontend: Home, About, Achievements, Batches and Contact',
       'MVC-structured Express backend with dedicated controllers, routes and config',
@@ -122,7 +122,7 @@ export const projects = [
     live: null,
     liveLabel: 'Practice Project',
     gradient: 'purple',
-    accentColor: '#8B5CF6',
+    accentColor: '#9B87F5',
     features: [
       'Full CRUD API built with Node.js and Express.js',
       'Separate backend/frontend structure mirroring a production SaaS layout',
@@ -142,7 +142,7 @@ export const projects = [
     github: 'https://github.com/Saurabh64377/thetigerfitnessgym',
     live: 'https://thetigerfitnessgym.vercel.app/',
     gradient: 'cyan',
-    accentColor: '#06B6D4',
+    accentColor: '#2AB8D4',
     features: [
       'React + Vite frontend built for fast development and load times',
       'Live public site for a real gym business in Padrauna, Kushinagar',

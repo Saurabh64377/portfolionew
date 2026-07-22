@@ -14,7 +14,7 @@ export const experiences = [
       'Self-directed MERN stack projects alongside coursework',
     ],
     icon: 'graduation',
-    color: '#3B82F6',
+    color: '#4F8CF7',
   },
   {
     id: 2,
@@ -31,7 +31,7 @@ export const experiences = [
       'Improved mobile responsiveness across diverse device platforms',
     ],
     icon: 'code',
-    color: '#8B5CF6',
+    color: '#9B87F5',
   },
   {
     id: 3,
@@ -49,6 +49,6 @@ export const experiences = [
       'Managed AWS EC2 deployments with Nginx reverse proxy configuration',
     ],
     icon: 'rocket',
-    color: '#06B6D4',
+    color: '#2AB8D4',
   },
 ]

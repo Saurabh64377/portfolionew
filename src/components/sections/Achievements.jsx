@@ -12,8 +12,8 @@ const stats = [
     label: 'Production Projects',
     desc: 'Full-stack applications shipped from concept to deployment',
     icon: FiPackage,
-    color: '#3B82F6',
-    bg: 'rgba(59,130,246,0.1)',
+    color: '#4F8CF7',
+    bg: 'rgba(79,140,247,0.08)',
   },
   {
     value: 1,
@@ -21,8 +21,8 @@ const stats = [
     label: 'Years Experience',
     desc: 'Professional full-stack development, internship through full-time',
     icon: FiBriefcase,
-    color: '#8B5CF6',
-    bg: 'rgba(139,92,246,0.1)',
+    color: '#9B87F5',
+    bg: 'rgba(155,135,245,0.08)',
   },
   {
     value: 2,
@@ -30,8 +30,8 @@ const stats = [
     label: 'Live Deployments',
     desc: 'Production sites running on AWS EC2 with Nginx and SSL',
     icon: FiRefreshCw,
-    color: '#06B6D4',
-    bg: 'rgba(6,182,212,0.1)',
+    color: '#2AB8D4',
+    bg: 'rgba(42,184,212,0.08)',
   },
   {
     value: 2,
@@ -39,8 +39,8 @@ const stats = [
     label: 'Companies',
     desc: 'Whizlancer Pvt. Ltd. and RAI Tech Corporation',
     icon: FiShield,
-    color: '#10B981',
-    bg: 'rgba(16,185,129,0.1)',
+    color: '#34D399',
+    bg: 'rgba(52,211,153,0.08)',
   },
 ]
 
@@ -49,19 +49,19 @@ const achievementCards = [
     title: 'Shipped Production Software',
     desc: 'Successfully launched 3+ production applications from concept to deployment, owning the full lifecycle from schema design to going live.',
     icon: '🚀',
-    color: '#3B82F6',
+    color: '#4F8CF7',
   },
   {
     title: 'Enterprise-Grade Authentication',
     desc: 'Implemented JWT-based authentication and role-based access control across multiple client projects, spanning 4-5 distinct user roles per system.',
     icon: '🔐',
-    color: '#8B5CF6',
+    color: '#9B87F5',
   },
   {
     title: 'Automated Deployment Workflows',
     desc: 'Automated CI/CD deployment pipelines and configured production infrastructure on AWS EC2 with Nginx and PM2.',
     icon: '⚙️',
-    color: '#06B6D4',
+    color: '#2AB8D4',
   },
 ]
 
@@ -72,11 +72,11 @@ function StatCard({ stat, index }) {
     <motion.div
       ref={ref}
       variants={staggerItemVariants}
-      className="glass-card rounded-2xl p-7 text-center group hover:scale-105 transition-transform duration-300"
+      className="glass-card rounded-2xl p-7 text-center group hover:scale-[1.02] transition-transform duration-300"
     >
       <div
         className="w-14 h-14 rounded-2xl flex items-center justify-center mx-auto mb-5 transition-transform duration-300 group-hover:scale-110"
-        style={{ background: stat.bg, border: `1px solid ${stat.color}25` }}
+        style={{ background: stat.bg, border: `1px solid ${stat.color}20` }}
       >
         <stat.icon size={24} style={{ color: stat.color }} />
       </div>
@@ -91,7 +91,7 @@ function StatCard({ stat, index }) {
       </div>
 
       <div className="text-white font-semibold text-sm mb-2">{stat.label}</div>
-      <div className="text-white/35 text-xs leading-relaxed">{stat.desc}</div>
+      <div className="text-[#8D95A3] text-xs leading-relaxed">{stat.desc}</div>
     </motion.div>
   )
 }
@@ -103,7 +103,7 @@ export default function Achievements() {
     <section id="achievements" className="relative py-28 overflow-hidden">
       <div
         className="absolute inset-0 pointer-events-none"
-        style={{ background: 'radial-gradient(ellipse 60% 50% at 50% 50%, rgba(59,130,246,0.06) 0%, transparent 70%)' }}
+        style={{ background: 'radial-gradient(ellipse 60% 50% at 50% 50%, rgba(79,140,247,0.04) 0%, transparent 70%)' }}
       />
 
       <div ref={ref} className="section-container relative z-10">
@@ -142,12 +142,12 @@ export default function Achievements() {
             >
               <div
                 className="w-11 h-11 rounded-xl flex items-center justify-center mb-4"
-                style={{ background: `${card.color}15`, border: `1px solid ${card.color}25` }}
+                style={{ background: `${card.color}12`, border: `1px solid ${card.color}20` }}
               >
                 <span className="text-xl">{card.icon}</span>
               </div>
               <h3 className="text-white font-semibold text-sm mb-2">{card.title}</h3>
-              <p className="text-white/45 text-xs leading-relaxed">{card.desc}</p>
+              <p className="text-[#8D95A3] text-xs leading-relaxed">{card.desc}</p>
             </motion.div>
           ))}
         </motion.div>

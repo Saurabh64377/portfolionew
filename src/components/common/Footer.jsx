@@ -23,7 +23,7 @@ export default function Footer() {
 
   return (
     <footer ref={ref} className="relative pt-20 pb-8 overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent pointer-events-none" />
 
       <div className="section-container relative z-10">
         <motion.div
@@ -36,11 +36,11 @@ export default function Footer() {
           <div className="flex flex-col items-center gap-3">
             <div
               className="w-14 h-14 rounded-2xl flex items-center justify-center font-black text-white text-2xl"
-              style={{ background: 'linear-gradient(135deg, #3B82F6, #8B5CF6)' }}
+              style={{ background: 'linear-gradient(135deg, #4F8CF7, #9B87F5)' }}
             >
               S
             </div>
-            <p className="text-white/40 text-sm max-w-sm">
+            <p className="text-[#6B7280] text-sm max-w-sm">
               Full Stack Developer building production applications at Whizlancer.
               Open to new opportunities.
             </p>
@@ -52,7 +52,7 @@ export default function Footer() {
               <a
                 key={link.href}
                 href={link.href}
-                className="text-white/40 hover:text-white text-sm transition-colors duration-300"
+                className="text-[#6B7280] hover:text-[#D0D7E2] text-sm transition-colors duration-300"
               >
                 {link.label}
               </a>
@@ -68,7 +68,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={label}
-                className="w-10 h-10 rounded-xl glass border border-white/08 flex items-center justify-center text-white/40 hover:text-white hover:border-accent/30 hover:bg-accent/10 transition-all duration-300"
+                className="w-10 h-10 rounded-xl glass border border-white/[0.05] flex items-center justify-center text-[#6B7280] hover:text-[#C8D2E0] hover:border-accent/25 hover:bg-accent/8 transition-all duration-300"
               >
                 <Icon size={16} />
               </a>
@@ -76,14 +76,14 @@ export default function Footer() {
           </div>
 
           {/* Divider */}
-          <div className="w-full h-px bg-white/06" />
+          <div className="w-full h-px bg-white/[0.04]" />
 
           {/* Copyright */}
-          <div className="flex flex-col sm:flex-row items-center justify-between w-full gap-2 text-xs text-white/25">
+          <div className="flex flex-col sm:flex-row items-center justify-between w-full gap-2 text-xs text-[#4B5563]">
             <span>© {year} Saurabh Agrahari. All rights reserved.</span>
             <span className="flex items-center gap-1.5">
               Made with
-              <span className="text-accent/60">♥</span>
+              <span className="text-accent/50">♥</span>
               by Saurabh
             </span>
           </div>

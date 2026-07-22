@@ -9,29 +9,29 @@ const highlights = [
     icon: FiCode,
     label: 'Frontend',
     desc: 'React.js, Redux Toolkit, Tailwind CSS',
-    color: '#3B82F6',
-    bg: 'rgba(59,130,246,0.1)',
+    color: '#4F8CF7',
+    bg: 'rgba(79,140,247,0.08)',
   },
   {
     icon: FiServer,
     label: 'Backend',
     desc: 'Node.js, Express.js, REST APIs, JWT',
-    color: '#8B5CF6',
-    bg: 'rgba(139,92,246,0.1)',
+    color: '#9B87F5',
+    bg: 'rgba(155,135,245,0.08)',
   },
   {
     icon: FiDatabase,
     label: 'Database',
     desc: 'MySQL, MongoDB',
-    color: '#06B6D4',
-    bg: 'rgba(6,182,212,0.1)',
+    color: '#2AB8D4',
+    bg: 'rgba(42,184,212,0.08)',
   },
   {
     icon: FiGlobe,
     label: 'Cloud & DevOps',
     desc: 'AWS EC2, Nginx, PM2, CI/CD',
-    color: '#10B981',
-    bg: 'rgba(16,185,129,0.1)',
+    color: '#34D399',
+    bg: 'rgba(52,211,153,0.08)',
   },
 ]
 
@@ -74,30 +74,30 @@ export default function About() {
               <div className="flex items-center gap-3">
                 <div
                   className="w-10 h-10 rounded-xl flex items-center justify-center"
-                  style={{ background: 'rgba(59,130,246,0.15)', border: '1px solid rgba(59,130,246,0.2)' }}
+                  style={{ background: 'rgba(79,140,247,0.12)', border: '1px solid rgba(79,140,247,0.15)' }}
                 >
-                  <HiAcademicCap size={20} style={{ color: '#93C5FD' }} />
+                  <HiAcademicCap size={20} style={{ color: '#8CAFED' }} />
                 </div>
                 <div>
                   <div className="text-white font-semibold text-sm">BCA, JS University, Agra</div>
-                  <div className="text-white/40 text-xs font-mono">2022 – 2025 · CGPA 7.96/10</div>
+                  <div className="text-[#6B7280] text-xs font-mono">2022 – 2025 · CGPA 7.96/10</div>
                 </div>
               </div>
 
-              <p className="text-white/55 text-sm leading-relaxed">
-                I'm <span className="text-white font-medium">Saurabh Agrahari</span>, a Full Stack Developer
+              <p className="text-[#A1AAB5] text-sm leading-relaxed">
+                I'm <span className="text-[#D0D7E2] font-medium">Saurabh Agrahari</span>, a Full Stack Developer
                 currently building production applications at{' '}
-                <span className="text-white">Whizlancer Pvt. Ltd.</span> I work end-to-end — from
+                <span className="text-[#D0D7E2]">Whizlancer Pvt. Ltd.</span> I work end-to-end — from
                 React frontends to Node.js/Express APIs backed by MySQL and MongoDB.
               </p>
-              <p className="text-white/55 text-sm leading-relaxed">
-                My work centers on <span className="text-white/80">role-based systems</span> — school
+              <p className="text-[#A1AAB5] text-sm leading-relaxed">
+                My work centers on <span className="text-[#C8D2E0]">role-based systems</span> — school
                 management platforms, multi-tenant SaaS tools, and internal dashboards where getting
                 authentication and permissions right matters as much as the UI. I've shipped{' '}
-                <span className="text-white/80">4 production projects</span>, two of them live and
+                <span className="text-[#C8D2E0]">4 production projects</span>, two of them live and
                 publicly deployed on AWS.
               </p>
-              <p className="text-white/55 text-sm leading-relaxed">
+              <p className="text-[#A1AAB5] text-sm leading-relaxed">
                 Beyond writing code, I own the <span className="gradient-text font-semibold">full deployment
                 pipeline</span> — AWS EC2, Nginx reverse proxies, PM2 process management, and SSL — so
                 what I build actually reaches users, not just a local dev server.
@@ -141,17 +141,17 @@ export default function About() {
               <motion.div
                 key={item.label}
                 variants={staggerItemVariants}
-                className="glass-card rounded-2xl p-5 group hover:scale-105 transition-transform duration-300"
+                className="glass-card rounded-2xl p-5 group hover:scale-[1.02] transition-transform duration-300"
                 style={{ '--accent': item.color }}
               >
                 <div
                   className="w-11 h-11 rounded-xl flex items-center justify-center mb-4 transition-all duration-300 group-hover:scale-110"
-                  style={{ background: item.bg, border: `1px solid ${item.color}30` }}
+                  style={{ background: item.bg, border: `1px solid ${item.color}25` }}
                 >
                   <item.icon size={20} style={{ color: item.color }} />
                 </div>
                 <div className="font-semibold text-white text-sm mb-1">{item.label}</div>
-                <div className="text-white/40 text-xs leading-relaxed">{item.desc}</div>
+                <div className="text-[#8D95A3] text-xs leading-relaxed">{item.desc}</div>
               </motion.div>
             ))}
 
@@ -163,13 +163,13 @@ export default function About() {
               <div className="flex items-start gap-4">
                 <div
                   className="w-11 h-11 rounded-xl flex items-center justify-center shrink-0"
-                  style={{ background: 'rgba(59,130,246,0.12)', border: '1px solid rgba(59,130,246,0.2)' }}
+                  style={{ background: 'rgba(79,140,247,0.1)', border: '1px solid rgba(79,140,247,0.15)' }}
                 >
                   <span className="text-xl">🔐</span>
                 </div>
                 <div>
                   <div className="font-semibold text-white text-sm mb-1">What I Care About</div>
-                  <p className="text-white/45 text-xs leading-relaxed">
+                  <p className="text-[#8D95A3] text-xs leading-relaxed">
                     Getting authentication, role-based permissions, and deployment right — the parts
                     of an app that don't show up in a demo but decide whether it survives production.
                   </p>

@@ -43,35 +43,35 @@ export default function Services() {
               <motion.div
                 key={service.id}
                 variants={staggerItemVariants}
-                className="glass-card rounded-2xl p-7 group relative overflow-hidden hover:scale-[1.02] transition-all duration-400"
-                style={{ borderColor: `${service.color}25` }}
+                className="glass-card rounded-2xl p-7 group relative overflow-hidden hover:scale-[1.01] transition-all duration-400"
+                style={{ borderColor: `${service.color}20` }}
               >
-                {/* Glow blob */}
+                {/* Subtle glow blob */}
                 <div
                   className="absolute -top-10 -right-10 w-32 h-32 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-                  style={{ background: `${service.color}20`, filter: 'blur(40px)' }}
+                  style={{ background: `${service.color}12`, filter: 'blur(40px)' }}
                 />
 
                 {/* Number */}
-                <div className="absolute top-6 right-6 text-5xl font-black text-white/03 select-none font-mono">
+                <div className="absolute top-6 right-6 text-5xl font-black text-white/[0.02] select-none font-mono">
                   0{service.id}
                 </div>
 
                 {/* Icon */}
                 <div
                   className="w-12 h-12 rounded-2xl flex items-center justify-center mb-6 relative z-10 transition-transform duration-300 group-hover:scale-110"
-                  style={{ background: `${service.color}15`, border: `1px solid ${service.color}30` }}
+                  style={{ background: `${service.color}12`, border: `1px solid ${service.color}25` }}
                 >
                   <Icon size={22} style={{ color: service.color }} />
                 </div>
 
                 <h3 className="text-white font-bold text-base mb-3 relative z-10">{service.title}</h3>
-                <p className="text-white/45 text-sm leading-relaxed mb-5 relative z-10">{service.description}</p>
+                <p className="text-[#8D95A3] text-sm leading-relaxed mb-5 relative z-10">{service.description}</p>
 
                 {/* Features */}
                 <ul className="space-y-2 relative z-10">
                   {service.features.map((feat) => (
-                    <li key={feat} className="flex items-center gap-2.5 text-xs text-white/45">
+                    <li key={feat} className="flex items-center gap-2.5 text-xs text-[#A1AAB5]">
                       <span
                         className="w-1.5 h-1.5 rounded-full shrink-0"
                         style={{ background: service.color }}

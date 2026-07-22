@@ -68,7 +68,7 @@ export default function Hero() {
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
-          background: 'radial-gradient(ellipse 80% 60% at 50% 0%, rgba(59,130,246,0.15) 0%, transparent 65%)',
+          background: 'radial-gradient(ellipse 70% 60% at 50% -10%, rgba(79,140,247,0.15) 0%, transparent 65%)',
         }}
       />
       <div
@@ -90,7 +90,7 @@ export default function Hero() {
             transition={{ delay: 1.3, duration: 0.5, ease: [0.34, 1.56, 0.64, 1] }}
             className="hero-cta"
           >
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-strong border border-white/10 text-sm text-white/60">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-strong border border-white/[0.08] text-sm text-[#A1AAB5]">
               <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
               Open to new opportunities
             </div>
@@ -114,12 +114,12 @@ export default function Hero() {
           {/* Typewriter */}
           <div ref={subtitleRef}>
             <div className="flex items-center justify-center gap-2 text-xl sm:text-2xl md:text-3xl font-semibold text-white/70">
-              <span className="text-white/30">{'<'}</span>
+              <span className="text-white/20">{'<'}</span>
               <span className="gradient-text min-w-[280px] sm:min-w-[340px] text-left">
                 {displayText}
               </span>
               <span className="typewriter-cursor" />
-              <span className="text-white/30">{'/>'}</span>
+              <span className="text-white/20">{'/>'}</span>
             </div>
           </div>
 
@@ -128,11 +128,11 @@ export default function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 2.2, duration: 0.7 }}
-            className="text-white/45 text-base sm:text-lg max-w-2xl leading-relaxed"
+            className="text-[#A1AAB5] text-base sm:text-lg max-w-2xl leading-relaxed"
           >
             Currently building production applications as a Full Stack Developer at{' '}
-            <span className="text-white/70">Whizlancer Pvt. Ltd.</span> Specialized in the{' '}
-            <span className="text-white/70">React / Node.js stack</span> — from secure,
+            <span className="text-[#D0D7E2]">Whizlancer Pvt. Ltd.</span> Specialized in the{' '}
+            <span className="text-[#D0D7E2]">React / Node.js stack</span> — from secure,
             role-based backends to pixel-perfect, deployment-ready UIs.
           </motion.p>
 
@@ -176,19 +176,19 @@ export default function Hero() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={label}
-                className="w-11 h-11 rounded-xl glass border border-white/08 flex items-center justify-center text-white/40 hover:text-white hover:border-accent/40 hover:bg-accent/10 transition-all duration-300 hover:scale-110"
+                className="w-10 h-10 rounded-xl glass border border-white/[0.06] flex items-center justify-center text-[#6B7280] hover:text-[#C8D2E0] hover:border-accent/30 hover:bg-accent/8 transition-all duration-300 hover:scale-105"
               >
-                <Icon size={18} />
+                <Icon size={16} />
               </a>
             ))}
           </motion.div>
 
           {/* Stats */}
-          <div ref={statsRef} className="flex flex-wrap justify-center gap-8 mt-4 pt-8 border-t border-white/06 w-full max-w-md">
+          <div ref={statsRef} className="flex flex-wrap justify-center gap-8 mt-4 pt-8 border-t border-white/[0.04] w-full max-w-md">
             {stats.map((s, i) => (
               <div key={i} className="stat-item text-center">
                 <div className="text-2xl sm:text-3xl font-black gradient-text">{s.value}</div>
-                <div className="text-xs text-white/35 mt-0.5 font-mono tracking-wide">{s.label}</div>
+                <div className="text-xs text-[#6B7280] mt-0.5 font-mono tracking-wide">{s.label}</div>
               </div>
             ))}
           </div>
@@ -202,12 +202,12 @@ export default function Hero() {
         transition={{ delay: 3, duration: 0.6 }}
         className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
       >
-        <span className="text-white/20 text-xs font-mono tracking-[3px] uppercase">Scroll</span>
-        <div className="w-5 h-8 border border-white/15 rounded-full flex items-start justify-center p-1">
+        <span className="text-white/15 text-xs font-mono tracking-[3px] uppercase">Scroll</span>
+        <div className="w-5 h-8 border border-white/[0.08] rounded-full flex items-start justify-center p-1">
           <motion.div
             animate={{ y: [0, 10, 0] }}
             transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}
-            className="w-1 h-2 rounded-full bg-accent/60"
+            className="w-1 h-2 rounded-full bg-accent/50"
           />
         </div>
       </motion.div>

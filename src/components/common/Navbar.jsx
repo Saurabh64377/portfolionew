@@ -25,11 +25,11 @@ function NavLogo() {
     >
       <div
         className="w-10 h-10 rounded-xl flex items-center justify-center font-black text-white text-lg relative overflow-hidden"
-        style={{ background: 'linear-gradient(135deg, #3B82F6, #8B5CF6)' }}
+        style={{ background: 'linear-gradient(135deg, #4F8CF7, #9B87F5)' }}
       >
         <span className="relative z-10">S</span>
         <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-          style={{ background: 'linear-gradient(135deg, #8B5CF6, #06B6D4)' }} />
+          style={{ background: 'linear-gradient(135deg, #9B87F5, #2AB8D4)' }} />
       </div>
       <span className="hidden sm:block font-bold text-white/90 text-sm tracking-wide">
         Saurabh<span className="text-accent">.</span>
@@ -96,7 +96,7 @@ export default function Navbar() {
               ? 'glass-strong px-6 py-3'
               : 'bg-transparent px-4 py-2'
           }`}
-          style={scrolled ? { boxShadow: '0 8px 40px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.06)' } : {}}
+          style={scrolled ? { boxShadow: '0 4px 32px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.04)' } : {}}
         >
           <div className="flex items-center justify-between">
             <NavLogo />
@@ -110,8 +110,8 @@ export default function Navbar() {
                   onClick={(e) => handleNavClick(e, link.href)}
                   className={`nav-link px-4 py-2 rounded-xl text-sm font-medium transition-all duration-300 ${
                     activeSection === link.href.slice(1)
-                      ? 'text-white bg-white/5'
-                      : 'text-white/50 hover:text-white/90 hover:bg-white/5'
+                      ? 'text-white bg-white/[0.04]'
+                      : 'text-[#8D95A3] hover:text-[#D0D7E2] hover:bg-white/[0.03]'
                   }`}
                 >
                   {link.label}
@@ -132,7 +132,7 @@ export default function Navbar() {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setMenuOpen(!menuOpen)}
-              className="lg:hidden w-10 h-10 flex items-center justify-center rounded-xl bg-white/5 border border-white/10 text-white transition-all duration-300 hover:bg-white/10"
+              className="lg:hidden w-10 h-10 flex items-center justify-center rounded-xl bg-white/[0.04] border border-white/[0.06] text-white transition-all duration-300 hover:bg-white/[0.08]"
             >
               {menuOpen ? <HiX size={20} /> : <HiMenuAlt4 size={20} />}
             </button>
@@ -149,7 +149,7 @@ export default function Navbar() {
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
             className="fixed top-24 left-4 right-4 z-[999] glass-strong rounded-2xl p-6 lg:hidden"
-            style={{ boxShadow: '0 20px 60px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.08)' }}
+            style={{ boxShadow: '0 16px 48px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.06)' }}
           >
             <div className="flex flex-col gap-2">
               {navLinks.map((link, i) => (
@@ -162,14 +162,14 @@ export default function Navbar() {
                   transition={{ delay: i * 0.06 }}
                   className={`px-4 py-3 rounded-xl text-sm font-medium transition-all duration-300 ${
                     activeSection === link.href.slice(1)
-                      ? 'text-white bg-accent/10 border border-accent/20'
-                      : 'text-white/60 hover:text-white hover:bg-white/5'
+                      ? 'text-white bg-accent/8 border border-accent/15'
+                      : 'text-[#A1AAB5] hover:text-white hover:bg-white/[0.03]'
                   }`}
                 >
                   {link.label}
                 </motion.a>
               ))}
-              <div className="mt-2 pt-4 border-t border-white/08">
+              <div className="mt-2 pt-4 border-t border-white/[0.06]">
                 <a
                   href="#contact"
                   onClick={(e) => handleNavClick(e, '#contact')}

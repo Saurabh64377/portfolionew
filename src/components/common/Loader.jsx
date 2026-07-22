@@ -48,7 +48,7 @@ export default function Loader() {
         <div className="w-48 h-px bg-white/10 mx-auto relative overflow-hidden rounded-full">
           <motion.div
             className="h-full rounded-full"
-            style={{ background: 'linear-gradient(90deg, #3B82F6, #8B5CF6)' }}
+            style={{ background: 'linear-gradient(90deg, #4F8CF7, #9B87F5)' }}
             initial={{ width: '0%' }}
             animate={{ width: `${count}%` }}
             transition={{ duration: 0.05, ease: 'linear' }}
@@ -66,7 +66,7 @@ export default function Loader() {
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
-          background: 'radial-gradient(ellipse 60% 60% at 50% 50%, rgba(59,130,246,0.08) 0%, transparent 70%)',
+          background: 'radial-gradient(ellipse 60% 60% at 50% 50%, rgba(79,140,247,0.06) 0%, transparent 70%)',
         }}
       />
     </div>

@@ -21,18 +21,18 @@ const iconMap = {
 const skillGroups = [
   {
     label: 'Languages',
-    color: '#3B82F6',
-    bgColor: 'rgba(59,130,246,0.08)',
+    color: '#4F8CF7',
+    bgColor: 'rgba(79,140,247,0.06)',
     skills: [
       { name: 'JavaScript (ES6)', icon: 'SiJavascript', iconColor: '#f7df1e' },
       { name: 'TypeScript', icon: 'SiTypescript', iconColor: '#3178c6' },
-      { name: 'SQL', icon: 'FiDatabase', iconColor: '#3B82F6' },
+      { name: 'SQL', icon: 'FiDatabase', iconColor: '#4F8CF7' },
     ],
   },
   {
     label: 'Frontend',
-    color: '#8B5CF6',
-    bgColor: 'rgba(139,92,246,0.08)',
+    color: '#9B87F5',
+    bgColor: 'rgba(155,135,245,0.06)',
     skills: [
       { name: 'React.js', icon: 'SiReact', iconColor: '#61dafb' },
       { name: 'Redux Toolkit', icon: 'SiRedux', iconColor: '#764abc' },
@@ -44,19 +44,19 @@ const skillGroups = [
   },
   {
     label: 'Backend',
-    color: '#06B6D4',
-    bgColor: 'rgba(6,182,212,0.08)',
+    color: '#2AB8D4',
+    bgColor: 'rgba(42,184,212,0.06)',
     skills: [
       { name: 'Node.js', icon: 'SiNodedotjs', iconColor: '#68a063' },
       { name: 'Express.js', icon: 'SiExpress', iconColor: '#ffffff' },
-      { name: 'REST APIs', icon: 'TbApi', iconColor: '#06B6D4' },
+      { name: 'REST APIs', icon: 'TbApi', iconColor: '#2AB8D4' },
       { name: 'JWT Auth', icon: 'SiJsonwebtokens', iconColor: '#fb015b' },
     ],
   },
   {
     label: 'Database',
-    color: '#10B981',
-    bgColor: 'rgba(16,185,129,0.08)',
+    color: '#34D399',
+    bgColor: 'rgba(52,211,153,0.06)',
     skills: [
       { name: 'MySQL', icon: 'SiMysql', iconColor: '#4479a1' },
       { name: 'MongoDB', icon: 'SiMongodb', iconColor: '#47a248' },
@@ -64,19 +64,19 @@ const skillGroups = [
   },
   {
     label: 'Cloud & DevOps',
-    color: '#3B82F6',
-    bgColor: 'rgba(59,130,246,0.08)',
+    color: '#4F8CF7',
+    bgColor: 'rgba(79,140,247,0.06)',
     skills: [
       { name: 'AWS EC2', icon: 'FaAws', iconColor: '#ff9900' },
       { name: 'Nginx', icon: 'SiNginx', iconColor: '#009639' },
-      { name: 'PM2', icon: 'FiServer', iconColor: '#3B82F6' },
-      { name: 'CI/CD', icon: 'FiRefreshCw', iconColor: '#8B5CF6' },
+      { name: 'PM2', icon: 'FiServer', iconColor: '#4F8CF7' },
+      { name: 'CI/CD', icon: 'FiRefreshCw', iconColor: '#9B87F5' },
     ],
   },
   {
     label: 'Tools',
-    color: '#8B5CF6',
-    bgColor: 'rgba(139,92,246,0.08)',
+    color: '#9B87F5',
+    bgColor: 'rgba(155,135,245,0.06)',
     skills: [
       { name: 'Git', icon: 'SiGit', iconColor: '#f05032' },
       { name: 'GitHub', icon: 'SiGithub', iconColor: '#ffffff' },
@@ -90,7 +90,7 @@ function SkillBadge({ skill, color }) {
   return (
     <motion.div
       variants={staggerItemVariants}
-      className="glass-card rounded-xl p-4 flex items-center gap-3 group hover:scale-[1.04] transition-all duration-300"
+      className="glass-card rounded-xl p-4 flex items-center gap-3 group hover:scale-[1.02] transition-all duration-300"
       style={{ '--hover-border': color }}
     >
       {Icon && (
@@ -101,7 +101,7 @@ function SkillBadge({ skill, color }) {
           <Icon size={17} style={{ color: skill.iconColor }} />
         </div>
       )}
-      <span className="text-white/80 text-sm font-medium">{skill.name}</span>
+      <span className="text-[#C8D2E0] text-sm font-medium">{skill.name}</span>
     </motion.div>
   )
 }
@@ -139,11 +139,11 @@ export default function Skills() {
               className={`px-5 py-2.5 rounded-xl text-sm font-medium transition-all duration-300 ${
                 activeGroup === group.label
                   ? 'text-white'
-                  : 'text-white/40 hover:text-white/70 glass border border-white/06'
+                  : 'text-[#A1AAB5] hover:text-[#D0D7E2] glass border border-white/[0.04]'
               }`}
               style={
                 activeGroup === group.label
-                  ? { background: group.bgColor, border: `1px solid ${group.color}40`, color: group.color }
+                  ? { background: group.bgColor, border: `1px solid ${group.color}30`, color: group.color }
                   : {}
               }
             >
@@ -172,7 +172,7 @@ export default function Skills() {
           animate={inView ? 'visible' : 'hidden'}
           className="mt-20 overflow-hidden"
         >
-          <p className="text-center text-white/25 text-xs font-mono tracking-[3px] uppercase mb-8">
+          <p className="text-center text-[#4B5563] text-xs font-mono tracking-[3px] uppercase mb-8">
             Technologies I work with
           </p>
           <div className="flex gap-8 animate-[scroll_20s_linear_infinite]">
@@ -181,10 +181,10 @@ export default function Skills() {
               return (
                 <div
                   key={`${skill.name}-${i}`}
-                  className="flex items-center gap-2 px-4 py-3 rounded-xl glass border border-white/05 shrink-0 hover:border-white/15 transition-colors duration-300"
+                  className="flex items-center gap-2 px-4 py-3 rounded-xl glass border border-white/[0.03] shrink-0 hover:border-white/[0.08] transition-colors duration-300"
                 >
                   {Icon && <Icon size={16} style={{ color: skill.iconColor, opacity: 0.7 }} />}
-                  <span className="text-white/35 text-xs font-mono whitespace-nowrap">{skill.name}</span>
+                  <span className="text-[#6B7280] text-xs font-mono whitespace-nowrap">{skill.name}</span>
                 </div>
               )
             })}

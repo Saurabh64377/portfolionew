@@ -5,7 +5,7 @@ export const services = [
     description:
       'End-to-end web application development with React.js on the frontend and Node.js/Express.js on the backend — from database schema to a shipped, deployed product.',
     icon: 'layers',
-    color: '#3B82F6',
+    color: '#4F8CF7',
     features: [
       'React.js + Node.js/Express.js applications',
       'Component-driven, responsive UIs',
@@ -19,7 +19,7 @@ export const services = [
     description:
       'Clean, maintainable REST APIs with Express.js — request validation, middleware architecture, and structured error handling.',
     icon: 'api',
-    color: '#8B5CF6',
+    color: '#9B87F5',
     features: [
       'RESTful endpoint design',
       'Middleware & request validation',
@@ -33,7 +33,7 @@ export const services = [
     description:
       'Secure, role-based systems — JWT authentication and permission structures for applications with multiple distinct user roles.',
     icon: 'auth',
-    color: '#06B6D4',
+    color: '#2AB8D4',
     features: [
       'JWT-based authentication',
       'Role-based access control (RBAC)',
@@ -47,7 +47,7 @@ export const services = [
     description:
       'Relational and document data modeling with MySQL and MongoDB — schemas built for the access patterns the application actually needs.',
     icon: 'database',
-    color: '#10B981',
+    color: '#34D399',
     features: [
       'MySQL relational schema design',
       'MongoDB document modeling',
@@ -61,7 +61,7 @@ export const services = [
     description:
       'Taking an application from local dev to a production server — AWS EC2, Nginx reverse proxies, process management, and automated deploys.',
     icon: 'cloud',
-    color: '#3B82F6',
+    color: '#4F8CF7',
     features: [
       'AWS EC2 server configuration',
       'Nginx reverse proxy setup',
@@ -75,7 +75,7 @@ export const services = [
     description:
       'Dashboards that serve several distinct user types from one codebase — Superadmin, Admin, Teacher, and Student views built on a shared, permission-aware data layer.',
     icon: 'dashboard',
-    color: '#8B5CF6',
+    color: '#9B87F5',
     features: [
       'Role-scoped dashboard views',
       'CRUD operations across user types',

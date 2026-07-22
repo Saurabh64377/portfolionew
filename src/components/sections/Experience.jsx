@@ -36,7 +36,7 @@ export default function Experience() {
           className="mt-20 max-w-3xl mx-auto space-y-0 relative"
         >
           {/* Vertical line */}
-          <div className="absolute left-6 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-accent/30 to-transparent md:-translate-x-1/2" />
+          <div className="absolute left-6 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-accent/20 to-transparent md:-translate-x-1/2" />
 
           {experiences.map((exp, i) => {
             const Icon = iconMap[exp.icon] || FiStar
@@ -55,9 +55,9 @@ export default function Experience() {
                   <div
                     className="w-12 h-12 rounded-2xl flex items-center justify-center border shadow-lg"
                     style={{
-                      background: `${exp.color}15`,
-                      borderColor: `${exp.color}30`,
-                      boxShadow: `0 0 20px ${exp.color}25`,
+                      background: `${exp.color}12`,
+                      borderColor: `${exp.color}25`,
+                      boxShadow: `0 0 20px ${exp.color}15`,
                     }}
                   >
                     <Icon size={20} style={{ color: exp.color }} />
@@ -71,8 +71,8 @@ export default function Experience() {
                   }`}
                 >
                   <div
-                    className="glass-card rounded-2xl p-6 hover:scale-[1.02] transition-transform duration-300"
-                    style={{ borderColor: `${exp.color}20` }}
+                    className="glass-card rounded-2xl p-6 hover:scale-[1.01] transition-transform duration-300"
+                    style={{ borderColor: `${exp.color}15` }}
                   >
                     <div
                       className={`flex flex-wrap items-center gap-2 mb-3 ${
@@ -81,27 +81,27 @@ export default function Experience() {
                     >
                       <span
                         className="text-xs font-mono px-3 py-1 rounded-full"
-                        style={{ background: `${exp.color}12`, color: exp.color, border: `1px solid ${exp.color}20` }}
+                        style={{ background: `${exp.color}10`, color: exp.color, border: `1px solid ${exp.color}20` }}
                       >
                         {exp.period}
                       </span>
                       <span
                         className="text-xs px-3 py-1 rounded-full capitalize"
-                        style={{ background: 'rgba(255,255,255,0.04)', color: 'rgba(255,255,255,0.4)', border: '1px solid rgba(255,255,255,0.08)' }}
+                        style={{ background: 'rgba(255,255,255,0.03)', color: 'rgba(255,255,255,0.35)', border: '1px solid rgba(255,255,255,0.06)' }}
                       >
                         {exp.type}
                       </span>
                     </div>
 
                     <h3 className="text-white font-bold text-base mb-1">{exp.title}</h3>
-                    <div className="text-white/40 text-sm mb-3 font-mono">
+                    <div className="text-[#6B7280] text-sm mb-3 font-mono">
                       {exp.organization} · {exp.location}
                     </div>
-                    <p className="text-white/50 text-sm leading-relaxed mb-4">{exp.description}</p>
+                    <p className="text-[#A1AAB5] text-sm leading-relaxed mb-4">{exp.description}</p>
 
                     <ul className={`space-y-1.5 ${isEven ? 'md:text-right' : ''}`}>
                       {exp.highlights.map((h, hi) => (
-                        <li key={hi} className={`flex items-center gap-2 text-xs text-white/40 ${isEven ? 'md:flex-row-reverse' : ''}`}>
+                        <li key={hi} className={`flex items-center gap-2 text-xs text-[#8D95A3] ${isEven ? 'md:flex-row-reverse' : ''}`}>
                           <span
                             className="w-1.5 h-1.5 rounded-full shrink-0"
                             style={{ background: exp.color }}

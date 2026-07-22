@@ -18,21 +18,21 @@ const contactInfo = [
     label: 'Email',
     value: 'saurabh64377@gmail.com',
     href: 'mailto:saurabh64377@gmail.com',
-    color: '#3B82F6',
+    color: '#4F8CF7',
   },
   {
     icon: FiPhone,
     label: 'Phone',
     value: '+91 8853953602',
     href: 'tel:+918853953602',
-    color: '#8B5CF6',
+    color: '#9B87F5',
   },
   {
     icon: FiMapPin,
     label: 'Location',
     value: 'Gorakhpur, India (Open to Remote)',
     href: null,
-    color: '#06B6D4',
+    color: '#2AB8D4',
   },
 ]
 
@@ -117,7 +117,7 @@ export default function Contact() {
             <div className="glass-card rounded-2xl p-8 space-y-6">
               <div>
                 <h3 className="text-white font-bold text-lg mb-2">Get In Touch</h3>
-                <p className="text-white/45 text-sm leading-relaxed">
+                <p className="text-[#8D95A3] text-sm leading-relaxed">
                   Whether you have a project in mind, need a Full Stack Developer for your team,
                   or just want to talk tech — my inbox is always open.
                 </p>
@@ -128,29 +128,29 @@ export default function Contact() {
                   <div key={item.label} className="flex items-center gap-4 group">
                     <div
                       className="w-11 h-11 rounded-xl flex items-center justify-center shrink-0 transition-transform duration-300 group-hover:scale-110"
-                      style={{ background: `${item.color}12`, border: `1px solid ${item.color}20` }}
+                      style={{ background: `${item.color}10`, border: `1px solid ${item.color}18` }}
                     >
                       <item.icon size={18} style={{ color: item.color }} />
                     </div>
                     <div>
-                      <div className="text-white/30 text-xs font-mono mb-0.5">{item.label}</div>
+                      <div className="text-[#6B7280] text-xs font-mono mb-0.5">{item.label}</div>
                       {item.href ? (
                         <a
                           href={item.href}
-                          className="text-white/70 text-sm hover:text-white transition-colors duration-300"
+                          className="text-[#C8D2E0] text-sm hover:text-white transition-colors duration-300"
                         >
                           {item.value}
                         </a>
                       ) : (
-                        <span className="text-white/70 text-sm">{item.value}</span>
+                        <span className="text-[#C8D2E0] text-sm">{item.value}</span>
                       )}
                     </div>
                   </div>
                 ))}
               </div>
 
-              <div className="pt-4 border-t border-white/06">
-                <div className="text-white/30 text-xs font-mono mb-3">Follow Me</div>
+              <div className="pt-4 border-t border-white/[0.04]">
+                <div className="text-[#6B7280] text-xs font-mono mb-3">Follow Me</div>
                 <div className="flex gap-3">
                   {socialLinks.map(({ icon: Icon, href, label }) => (
                     <a
@@ -159,7 +159,7 @@ export default function Contact() {
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label={label}
-                      className="w-10 h-10 rounded-xl glass border border-white/08 flex items-center justify-center text-white/40 hover:text-white hover:border-accent/30 hover:bg-accent/10 transition-all duration-300 hover:scale-110"
+                      className="w-10 h-10 rounded-xl glass border border-white/[0.05] flex items-center justify-center text-[#6B7280] hover:text-[#C8D2E0] hover:border-accent/25 hover:bg-accent/8 transition-all duration-300 hover:scale-105"
                     >
                       <Icon size={16} />
                     </a>
@@ -173,7 +173,7 @@ export default function Contact() {
               <div className="w-3 h-3 rounded-full bg-emerald-400 animate-pulse shrink-0" />
               <div>
                 <div className="text-white font-semibold text-sm">Open to New Opportunities</div>
-                <div className="text-white/40 text-xs mt-0.5">
+                <div className="text-[#8D95A3] text-xs mt-0.5">
                   Currently at Whizlancer, open to new full-time roles and collaborations
                 </div>
               </div>
@@ -192,7 +192,7 @@ export default function Contact() {
 
               <div className="grid sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-white/40 text-xs font-mono mb-2 uppercase tracking-wide">
+                  <label className="block text-[#6B7280] text-xs font-mono mb-2 uppercase tracking-wide">
                     Your Name *
                   </label>
                   <input
@@ -209,7 +209,7 @@ export default function Contact() {
                   )}
                 </div>
                 <div>
-                  <label className="block text-white/40 text-xs font-mono mb-2 uppercase tracking-wide">
+                  <label className="block text-[#6B7280] text-xs font-mono mb-2 uppercase tracking-wide">
                     Email *
                   </label>
                   <input
@@ -229,7 +229,7 @@ export default function Contact() {
               </div>
 
               <div>
-                <label className="block text-white/40 text-xs font-mono mb-2 uppercase tracking-wide">
+                <label className="block text-[#6B7280] text-xs font-mono mb-2 uppercase tracking-wide">
                   Subject
                 </label>
                 <input
@@ -242,7 +242,7 @@ export default function Contact() {
               </div>
 
               <div>
-                <label className="block text-white/40 text-xs font-mono mb-2 uppercase tracking-wide">
+                <label className="block text-[#6B7280] text-xs font-mono mb-2 uppercase tracking-wide">
                   Message *
                 </label>
                 <textarea

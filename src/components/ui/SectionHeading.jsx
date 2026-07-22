@@ -26,7 +26,7 @@ export default function SectionHeading({ tag, title, highlight, subtitle, align 
       {subtitle && (
         <motion.p
           variants={staggerItemVariants}
-          className="text-white/50 text-base sm:text-lg max-w-2xl leading-relaxed"
+          className="text-[#A1AAB5] text-base sm:text-lg max-w-2xl leading-relaxed"
           style={align === 'center' ? { marginLeft: 'auto', marginRight: 'auto' } : {}}
         >
           {subtitle}
